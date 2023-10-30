@@ -14,7 +14,6 @@ namespace Rko_encription
             while (true)
             {
                 var text = SetText();
-
                 Console.WriteLine(">>Classic");
                 var result = simpleEncryption.Encrypt(text);
                 simpleEncryption.Decrypt(result.Result, result.Key);
