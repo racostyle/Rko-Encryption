@@ -10,7 +10,7 @@
 
         public static int GenerateKey()
         {
-            var key = r.Next(1, Stafi.NO_OF_CHARACTERS / 10);
+            var key = r.Next(1, Stafi.NO_OF_CHARACTERS / 2);
             Console.WriteLine($"Generated key: {key}");
             return key;
         }

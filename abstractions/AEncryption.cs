@@ -2,7 +2,7 @@
 {
     public abstract class AEncryption
     {
-        protected List<char> GetAsciiTable()
+        protected char[] GetAsciiTable()
         {
             List<char> asciiChars = new List<char>();
 
@@ -10,7 +10,7 @@
             {
                 asciiChars.Add((char)i);
             }
-            return asciiChars;
+            return asciiChars.Where(c => (c >= 33 && c <= 126) || c == ' ').ToArray();
         }
 
         protected char[] DecryptLoop(Dictionary<char, char> dict, char[] input)

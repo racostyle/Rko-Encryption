@@ -42,18 +42,18 @@ namespace Rko_encription
             var dict = new Dictionary<char, char>();
             var ascii = GetAsciiTable();
 
-            for (int i = 0; i < ascii.Count; i++)
+            for (int i = 0; i < ascii.Length; i++)
             {
                 dict.Add(ascii[i], GetCharInRange(ascii, i, key));
             }
             return dict;
         }
 
-        private char GetCharInRange(List<char> table, int index, int key)
+        private char GetCharInRange(char[] table, int index, int key)
         {
-            if (index + key < table.Count)
+            if (index + key < table.Length)
                 return table[index + key];
-            return table[(index + key) - table.Count];
+            return table[(index + key) - table.Length];
         }
     }
 }

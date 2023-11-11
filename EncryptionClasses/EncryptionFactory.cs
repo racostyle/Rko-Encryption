@@ -17,11 +17,13 @@ namespace Rko_encription
             switch (type)
             {
                 case EncryptionType.Double:
-                    return new EncryptionDouble(new EncryptionClassic(key));
+                    return new EncryptionDouble(
+                        new EncryptionClassic(key));
                 case EncryptionType.DoubleWKey:
                     return new EncryptionDoubleWKey(
-                        new EncryptionDouble(new EncryptionClassic(key)), 
-                        new KeyEncryption(key));
+                        new EncryptionDouble(
+                            new EncryptionClassic(key)), 
+                            new KeyEncryption(key));
                 default: //EncryptionType.Classic
                     return new EncryptionClassic(key);
             }

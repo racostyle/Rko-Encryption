@@ -1,10 +1,10 @@
 ﻿namespace Rko_encription
 {
-    public class EncryptionDecorator : IEncryption
+    public class EncryptionProxy : IEncryption
     {
         private readonly IEncryption _encryption;
 
-        public EncryptionDecorator(IEncryption encryption)
+        public EncryptionProxy(IEncryption encryption)
         {
             _encryption = encryption;
         }
