@@ -48,7 +48,7 @@ namespace Rko_encription
 
         private Dictionary<char, char> GetAllLettersDict()
         {
-            //var keys = GetAsciiTable().SkipWhile(x => !x.Equals('A')).TakeWhile(x => !x.Equals('z')).ToList();
+            //var keys = GetAsciiHashTable().SkipWhile(x => !x.Equals('A')).TakeWhile(x => !x.Equals('z')).ToList();
             var asciiTable = GetAsciiTable();
             var keys1 = asciiTable
                 .SkipWhile(x => !x.Equals('A'))
