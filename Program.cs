@@ -1,4 +1,4 @@
-﻿using ExtensionMethods;
+﻿using Rko_encription.Hash;
 
 namespace Rko_encription
 {
@@ -42,11 +42,19 @@ namespace Rko_encription
             var hash3 = primer.ToHash(50);
             var hash4 = primer.ToHash(50);
 
+            var hashSalt1 = primer.ToHashWithSalt(50);
+            var hashSalt2 = primer.ToHashWithSalt(50, hashSalt1.Salt);
+
             Console.WriteLine($"Input: {primer}");
             Console.WriteLine($"Hash1: {hash1}");
             Console.WriteLine($"Hash2: {hash2}");
             Console.WriteLine($"Hash3: {hash3}");
             Console.WriteLine($"Hash4: {hash4}");
+            Console.WriteLine("");
+            Console.WriteLine($"HashSalt1 hash: {hashSalt1.Hash}");
+            Console.WriteLine($"HashSalt1 salt: {hashSalt1.Salt}");
+            Console.WriteLine($"HashSalt2 hash: {hashSalt2.Hash}");
+            Console.WriteLine($"HashSalt2 salt: {hashSalt2.Salt}");
             Console.WriteLine("");
             
         }
