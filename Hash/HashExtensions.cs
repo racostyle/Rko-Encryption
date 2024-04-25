@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Text;
 
 namespace Rko_encription.Hash
 {
@@ -56,7 +54,7 @@ namespace Rko_encription.Hash
         private static char[] ScrambleHashTable(char[] charTable, int value, int length)
         {
             List<char> tempTable;
-            tempTable = HashUtils.GenerateTemporaryTable(charTable, value);
+            tempTable = HashUtils.OrderAndScrambleTable(charTable, value);
 
             var modulo = length % 3 + 2;
             tempTable = tempTable.Where((item, index) => index % modulo == 1).Concat(tempTable).Distinct().ToList();

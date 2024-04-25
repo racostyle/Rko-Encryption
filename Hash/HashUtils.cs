@@ -24,7 +24,7 @@
             return asciiChars.Where(c => char.IsLetter(c) || char.IsDigit(c)).ToArray();
         }
 
-        internal static List<char> GenerateTemporaryTable(char[] charTable, int value)
+        internal static List<char> OrderAndScrambleTable(char[] charTable, int value)
         {
             var numbers = charTable.Where(x => char.IsDigit(x)).ToList();
             var lowercase = charTable.Where(x => char.IsLower(x)).ToList();
